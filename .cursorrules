@@ -1,0 +1,34 @@
+# .cursorrules - LockedIn Master Guidelines
+
+## Environment & Tech Stack
+- Expo SDK 56, React Native 0.85, React 19, TypeScript (Strict).
+- Supabase JS v2 with PostgreSQL RLS and custom RPC functions.
+- React Navigation v7 (Bottom Tabs + Native Stack).
+- Vector Icons: `@expo/vector-icons` (Feather, Ionicons).
+
+## Critical Design & UI Constraints
+1. **NO EMOJIS IN UI**: Do not use emojis in titles, buttons, status tags, or text copy. Use clean typography and geometric vector icons from `@expo/vector-icons` exclusively.
+2. **Visual Theme (Clean, Sharp, Minimalist Dark)**:
+   - Background: `#0A0A0F`
+   - Card Surface: `#12121A`
+   - Surface Elevated: `#1C1C28`
+   - Borders: `#27273A` (sharp 1px borders everywhere)
+   - Accent Primary: `#6366F1` (Indigo)
+   - Status Safe: `#10B981` (Emerald)
+   - Status Pending: `#64748B` (Slate)
+   - Status Danger / Fell Off: `#EF4444` (Crimson)
+   - Status Warning / Strike: `#F59E0B` (Amber)
+   - Text Primary: `#F8FAFC`, Text Muted: `#94A3B8`
+3. **Typography**: High tracking/letter-spacing on badges and status pills (e.g., `LOCKED IN`, `ON THE LINE`, `FELL OFF`, `STRIKE 1/3`).
+
+## Core Business Logic
+1. **Group Accountability**:
+   - Check-in frequencies: 1–7 times per week.
+   - Proof requirement: Optional/Mandatory photo upload.
+   - Enforcement modes: `auto_kick`, `three_strikes`, `social_shame`.
+2. **Democratic Kick Vote**:
+   - Members flagged with status `fell_off` can be voted out by active group members.
+   - When votes exceed 50% of the total active group member count, the user is automatically removed.
+3. **Multi-Group Check-Ins**:
+   - A single check-in session can satisfy quotas across multiple selected groups matching the category.
+   - User can toggle an optional checkbox to share the log to the public feed.
