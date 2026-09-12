@@ -86,6 +86,7 @@ All business logic, password validation, voting thresholds, and quota tracking r
 
 ## Project Structure
 
+```text
 src/
 ├── api/             # Supabase data queries & RPC callers
 ├── components/      # Modular UI library (Cards, Badges, Modals, Feed items)
@@ -94,7 +95,6 @@ src/
 ├── navigation/      # React Navigation bottom tabs & auth stack
 ├── screens/         # Feed, Groups Hub, Group Detail, Goals, Profile, Auth
 └── types/           # TypeScript database & domain interfaces
-
 ---
 
 ## License
